@@ -1,0 +1,12 @@
+<ng-select
+  [items]="people"
+  bindLabel="name"
+  [loading]="peopleLoading"
+  [searchFn]="customSearchFn"
+>
+  <ng-template ng-option-tmp let-item="item">
+    <img height="15" width="15" [src]="item.picture" />
+    {{ item.name }} <br />
+    <small>{{ item.gender }}</small>
+  </ng-template>
+</ng-select>
